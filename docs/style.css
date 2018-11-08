@@ -1,1 +1,1 @@
-body{background:#61bea0}nav{width:100%;height:30px;font-size:25px;cursor:pointer;text-align:center;margin:5% auto}nav a{text-decoration:none;text-transform:uppercase;color:#ddd;padding:10px 15px;border-radius:2px}nav a:hover{background:red;transition:all 1s}
+.navbar{display:flex;height:2rem;margin:20px auto}.navbar__branding{width:80px;margin:auto 10px}.navbar__nav{display:inline-block;list-style:none}.navbar__nav__item{display:inline}

@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  height: 2rem;
+  margin: 20px auto;
+}
+
+.navbar__branding {
+  width: 80px;
+  margin: auto 10px;
+}
+
+.navbar__nav {
+  display: inline-block;
+  list-style: none;
+}
+
+.navbar__nav__item {
+  display: inline;
+}
+
+.navbar__item__link {
+}

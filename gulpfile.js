@@ -47,7 +47,7 @@ gulp.task("css", cb => {
   pump(
     [
       gulp.src("style.scss"),
-      newer("docs/style.css"),
+      //newer("docs/style.css"),
       sass(),
       cssnano(),
       gulp.dest("docs/"),
@@ -86,7 +86,7 @@ gulp.task("images", cb => {
 
 gulp.task("watch", ["default"], () => {
   gulp.watch("index.html", ["html"]);
-  gulp.watch("style.scss", ["css"]);
+  gulp.watch("**.scss", ["css"]);
   gulp.watch("app.js", ["js"]);
   gulp.watch("images/**.*", ["images"]);
 });
