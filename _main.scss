@@ -1,0 +1,35 @@
+.section {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.main__heading {
+  width: 90vw;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.text {
+  width: 75vw;
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+
+.main__input {
+  margin: 10px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid rgba(58, 58, 58, 0.5);
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.main__button {
+  background: rgb(47, 101, 243);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  width: 313px;
+  height: 40px;
+  border-radius: 2px;
+}
