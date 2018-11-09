@@ -1,22 +1,38 @@
+// styling for navbar
+
+.section {
+  height: 100vh;
+  width: 95vw;
+}
 .navbar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 2rem;
-  margin: 20px auto;
+  margin: 15px auto;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar__branding {
   width: 80px;
-  margin: auto 10px;
+  margin-left: 10px;
+  flex-basis: auto;
 }
 
 .navbar__nav {
   display: inline-block;
   list-style: none;
+  font-size: 0.8em;
 }
 
 .navbar__nav__item {
-  display: inline;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
-.navbar__item__link {
+.navbar__main-image {
+  display: block;
+  width: 85vw;
+  margin: 0 auto;
 }
