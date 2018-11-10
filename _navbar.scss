@@ -9,7 +9,7 @@
   justify-content: space-between;
   height: 1.9rem;
   margin: 15px auto;
-  font-family: "Raleway", sans-serif;
+  font-family: $head-font;
 }
 
 .navbar__branding {
@@ -22,7 +22,7 @@
   display: inline-block;
   list-style: none;
   font-size: 0.75em;
-  font-weight: 400;
+  font-weight: $regular;
 }
 
 .navbar__nav__item {

@@ -45,7 +45,7 @@ gulp.task("html", cb => {
 gulp.task("css", cb => {
   pump(
     [
-      gulp.src("style.scss"),
+      gulp.src("main.scss"),
       //newer("docs/style.css"),
       sass(),
       cssnano({

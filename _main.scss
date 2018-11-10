@@ -1,5 +1,7 @@
+//scss for main section
+
 .main__section {
-  font-family: "Open Sans", sans-serif;
+  font-family: $body-font;
   text-align: center;
   margin: 0 auto;
 }
@@ -14,16 +16,16 @@
 .main__heading {
   margin: 0 auto;
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: $bold;
   margin-top: 35px;
 }
 
-.text {
+.main__text {
   width: 80%;
   margin: 0 auto;
   margin-top: 25px;
   font-size: 0.9em;
-  font-weight: 400;
+  font-weight: $regular;
   line-height: 1.5;
 }
 
@@ -34,16 +36,16 @@
   margin-top: 25px;
   width: 300px;
   height: 30px;
-  border: 1px solid rgba(58, 58, 58, 0.5);
+  border: 1px solid $gray; //rgba(58, 58, 58, 0.5);
   border-radius: 3px;
   outline: none;
 }
 
 .main__button {
-  background: rgb(47, 101, 243);
+  background: $bright-blue; //rgb(47, 101, 243);
   color: white;
   font-size: 0.85em;
-  font-weight: 700;
+  font-weight: $bold;
   border: none;
   width: 313px;
   height: 40px;
