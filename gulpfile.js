@@ -13,8 +13,7 @@ gulp.task("browserSync", () => {
   browserSync.init({
     server: {
       baseDir: "docs/"
-    },
-    port: 3000
+    }
   });
 });
 // live reload
