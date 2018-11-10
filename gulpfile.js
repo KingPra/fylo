@@ -6,8 +6,8 @@ const gulp = require("gulp"),
   imagemin = require("gulp-imagemin"), //minify images
   uglify = require("gulp-uglify-es").default, //minify js
   pump = require("pump"), // use in place of pipe method for better error handling
-  newer = require("gulp-newer"); //only updates updated files
-
+  newer = require("gulp-newer"), //only updates updated files
+  autoprefixer = require("gulp-autoprefixer"); //auto adds prefixes for css
 // setup for live reload
 gulp.task("browserSync", () => {
   browserSync.init({
@@ -49,7 +49,12 @@ gulp.task("css", cb => {
       gulp.src("style.scss"),
       //newer("docs/style.css"),
       sass(),
-      cssnano(),
+      cssnano({
+        autoprefixer: {
+          browsers: ["> 1%", "last 2 versions", "Firefox >= 20"],
+          add: true
+        }
+      }),
       gulp.dest("docs/"),
       browserSyncReload()
     ],
