@@ -11,8 +11,8 @@
 
 .section-2__container {
   margin-top: -5px;
+  padding-bottom: 40px;
   background: $steel;
-  //background: rgb(248, 248, 254);
 }
 
 .section-2__img {
@@ -32,6 +32,9 @@
 
 .text {
   width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 0.85em;
   font-weight: $regular;
 }
 
@@ -61,12 +64,13 @@
   width: 80%;
   background: white;
   border-radius: 3px;
-  box-shadow: 2px 2px 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 15px 5px rgba(87, 87, 87, 0.1);
 }
 
 .testimonial__container {
   width: 80%;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .testimonial__quotes {
@@ -84,7 +88,7 @@
 }
 
 .testimonial__widget-container {
-  vertical-align: middle;
+  position: relative;
 }
 
 .testimonial__widget__avatar {
@@ -94,6 +98,9 @@
 }
 
 .testimonial__widget-name {
+  position: absolute;
+  top: -5px;
+  left: 30px;
   font-size: 0.4em;
   font-weight: $bold;
   display: inline-block;
@@ -101,6 +108,10 @@
 
 .testimonial__widget-role {
   //display: block;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+
   font-size: 7px;
   font-weight: $regular;
 }
