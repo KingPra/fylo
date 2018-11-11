@@ -90,7 +90,7 @@ gulp.task("images", cb => {
 
 gulp.task("watch", ["default"], () => {
   gulp.watch("index.html", ["html"]);
-  gulp.watch("**.scss", ["css"]);
+  gulp.watch("*.scss", ["css"]);
   gulp.watch("app.js", ["js"]);
   gulp.watch("images/**.*", ["images"]);
 });
