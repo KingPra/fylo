@@ -45,25 +45,25 @@
 
   // small screens
   @include sm {
-    font-size: 1em;
+    font-size: 0.75em;
     margin: 30px auto;
   }
 
   // medium screens
   @include md {
-    font-size: 1.3em;
+    font-size: 1em;
     margin: 40px auto;
   }
 
   // large screens
   @include lg {
-    font-size: 1.4em;
+    font-size: 1.1em;
     margin: 50px auto;
   }
 
   // extra large screens
   @include xl {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 50px auto;
   }
 }
