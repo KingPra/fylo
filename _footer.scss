@@ -1,0 +1,34 @@
+.footer__section {
+  padding-top: 30px;
+  padding-left: 40px;
+  background: $dark-blue;
+}
+
+// .white {
+//   color: white;
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+
+.footer__brand {
+  margin-top: 40px;
+}
+
+.footer__phone,
+.footer__email {
+  display: block;
+  margin-top: 40px;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+  img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+.footer__email {
+  margin-top: 20px;
+}
