@@ -9,11 +9,15 @@
   margin-top: 40px;
 }
 
-.footer__phone,
-.footer__email {
+.footer__phone-container,
+.footer__email-container {
   display: block;
   margin-top: 40px;
   font-size: 1.1em;
+}
+
+.footer__phone,
+.footer__email {
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -21,6 +25,11 @@
   img {
     vertical-align: middle;
     margin-right: 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: grey;
   }
 }
 
