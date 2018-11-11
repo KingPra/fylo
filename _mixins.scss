@@ -25,3 +25,10 @@
     @content;
   }
 }
+
+// custom devices
+@mixin rwd {
+  @media (min-width: #{$screen + 'px'}) {
+    @content;
+  }
+}

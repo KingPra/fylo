@@ -3,25 +3,74 @@
 .section {
   width: 100%;
 }
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 1.9rem;
-  margin: 15px auto;
-  font-family: $head-font;
-}
 
 .navbar__branding {
   width: 80px;
   margin-left: 10px;
   flex-basis: auto;
+
+  // small screens
+  @include sm {
+    width: 100px;
+    margin-left: 20px;
+  }
+
+  // medium screens
+  @include md {
+    width: 120px;
+    //margin-left: 30px;
+  }
+
+  // large screens
+  @include lg {
+    width: 150px;
+    //margin-left: 40px;
+  }
+
+  // extra large screens
+  @include xl {
+    width: 200px;
+    //margin-left: 50px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75em;
+  width: 95%;
+  margin: 15px auto;
+  font-family: $head-font;
+
+  // small screens
+  @include sm {
+    font-size: 1em;
+    margin: 30px auto;
+  }
+
+  // medium screens
+  @include md {
+    font-size: 1.3em;
+    margin: 40px auto;
+  }
+
+  // large screens
+  @include lg {
+    font-size: 1.4em;
+    margin: 50px auto;
+  }
+
+  // extra large screens
+  @include xl {
+    font-size: 1.5em;
+    margin: 50px auto;
+  }
 }
 
 .navbar__nav {
   display: inline-block;
   list-style: none;
-  font-size: 0.75em;
   font-weight: $regular;
 }
 
