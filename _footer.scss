@@ -36,12 +36,12 @@
 .footer__nav__item {
   text-decoration: none;
   margin: 10px auto;
+  list-style: none;
 }
 
 .footer__nav__link {
   color: white;
   text-decoration: none;
-  list-style: none;
 }
 
 .footer__social-media-container {
@@ -52,6 +52,7 @@
 }
 
 .footer__social-media-icons {
-  margin: 0 10px;
+  margin: 0 5px;
   width: 25px;
+  cursor: pointer;
 }
