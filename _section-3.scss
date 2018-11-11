@@ -1,0 +1,40 @@
+.section {
+  background: $blue;
+  text-align: center;
+  font-family: $body-font;
+}
+
+.action__title__heading {
+  margin: 0 auto;
+  color: white;
+  font-size: 1.1em;
+  font-weight: $bold;
+  padding-top: 50px;
+}
+
+.action__text {
+  color: white;
+  font-size: 0.9em;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.action__input {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 250px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.action__button {
+  margin-top: 5px;
+  width: 260px;
+  height: 30px;
+  border-radius: 2px;
+  background: $blue;
+  color: white;
+  font-weight: $bold;
+}
