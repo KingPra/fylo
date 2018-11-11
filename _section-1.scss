@@ -15,29 +15,26 @@
   // small screens
   @include sm {
     position: absolute;
-    top: 0;
+    top: -80px;
     right: 0;
   }
 
   // medium screens
   @include md {
     width: 50%;
-    margin-top: 40px;
     margin-right: 40px;
   }
 
   // large screens
   @include lg {
-    width: 40%;
-    margin-top: 50px;
+    width: 50%;
     margin-right: 50px;
   }
 
   // extra large screens
   @include xl {
-    width: 40%;
-    margin-top: 60px;
-    margin-right: 60px;
+    width: 50%;
+    margin-right: 80px;
   }
 }
 
@@ -154,7 +151,8 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
   @include lg {
-    margin-left: 35px;
+    margin-left: 25px;
+    margin-right: 10px;
     width: 275px;
     height: 52px;
   }
