@@ -3,10 +3,23 @@
   padding-top: 30px;
   padding-left: 40px;
   background: $dark-blue;
+
+  @include md {
+    display: grid;
+    grid-template-columns: repeat(4) 25%;
+    grid-template-rows: repeat(2) auto;
+    padding-left: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 .footer__brand {
   margin-top: 40px;
+
+  @include md {
+    grid-column: 1 / 6;
+    grid-row-start: 1;
+  }
 }
 
 .footer__phone-container,
@@ -14,6 +27,23 @@
   display: block;
   margin-top: 40px;
   font-size: 1.1em;
+
+  @include md {
+    grid-row: 2 / 3;
+    grid-column: 1 / 1;
+  }
+}
+
+.footer__phone-container {
+  @include md {
+    margin-top: 20px;
+  }
+}
+
+.footer__email-container {
+  @include md {
+    margin-top: 60px;
+  }
 }
 
 .footer__phone,
@@ -40,6 +70,10 @@
 .footer__nav ul {
   padding: 0;
   margin-top: 50px;
+
+  @include md {
+    margin-top: 0;
+  }
 }
 
 .footer__nav__item {
@@ -58,6 +92,12 @@
   padding: 50px 0;
   text-align: center;
   background: $dark-blue;
+
+  @include md {
+    padding-top: 15px;
+    grid-column-start: 4;
+    grid-row-start: 2;
+  }
 }
 
 .footer__social-media-icons {
