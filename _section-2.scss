@@ -232,8 +232,12 @@
 
 .testimonial__widget__avatar {
   border-radius: 50%;
-  width: 12%;
+  width: 30px;
   vertical-align: middle;
+
+  @include md {
+    width: 40px;
+  }
 }
 
 .testimonial__widget-name {
@@ -245,7 +249,7 @@
   display: inline-block;
 
   @include md {
-    left: 40px;
+    left: 50px;
     font-size: 0.6em;
     top: -10px;
   }
@@ -268,7 +272,7 @@
   @include md {
     font-size: 8px;
     top: 5px;
-    left: 40px;
+    left: 50px;
   }
 
   @include lg {
