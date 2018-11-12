@@ -1,8 +1,26 @@
-.section {
+.section-3 {
   background: $blue;
   text-align: center;
   font-family: $body-font;
   padding-bottom: 50px;
+}
+
+.action__container {
+  @include lg {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.action__container-sub-1 {
+  display: block;
+  //width: 100%;
+  margin: 0 auto;
+  @include lg {
+    order: 1;
+    width: 50%;
+    margin-left: 80px;
+  }
 }
 
 .action__title__heading {
@@ -11,14 +29,39 @@
   font-size: 1.1em;
   font-weight: $bold;
   padding-top: 50px;
+
+  @include lg {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+    font-size: 2em;
+  }
 }
 
 .action__text {
   color: white;
   font-size: 0.9em;
-  width: 80%;
   margin: 0 auto;
   margin-top: 20px;
+  width: 90%;
+
+  @include lg {
+    margin-left: 0;
+    text-align: left;
+    width: 80%;
+    font-size: 1.1em;
+  }
+}
+
+.action__container-sub-2 {
+  display: block;
+  margin: 0 auto;
+  @include lg {
+    order: 2;
+    margin-top: 80px;
+    margin-left: 0;
+    width: 50%;
+  }
 }
 
 .action__input {
@@ -28,6 +71,16 @@
   width: 250px;
   height: 30px;
   border-radius: 2px;
+
+  @include lg {
+    width: 350px;
+    height: 40px;
+    margin-left: 0;
+
+    &::placeholder {
+      font-size: 1.3em;
+    }
+  }
 }
 
 .action__button {
@@ -40,4 +93,13 @@
   border: none;
   color: white;
   font-weight: $bold;
+
+  @include lg {
+    margin-top: 15px;
+    margin-left: -175px;
+    text-align: left;
+    height: 50px;
+    text-align: center;
+    font-size: 0.9em;
+  }
 }

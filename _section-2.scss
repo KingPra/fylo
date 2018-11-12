@@ -4,15 +4,38 @@
   font-family: $body-font;
 }
 
-.section-2__img-1 {
-  margin-top: 90px;
-  width: 100%;
+.section-2__img-1-mobile {
+  display: block;
+  margin-top: 100px;
+
+  @include md {
+    display: none;
+  }
+}
+
+.section-2__img-1-dt {
+  display: none;
+
+  @include md {
+    display: block;
+    width: 100%;
+    margin-top: 80px;
+  }
 }
 
 .section-2__container {
   margin-top: -5px;
   padding-bottom: 40px;
   background: $steel;
+
+  @include md {
+    display: flex;
+  }
+}
+
+.title__container {
+  order: 1;
+  width: 100%;
 }
 
 .section-2__img {
@@ -21,6 +44,21 @@
   margin-top: 0px;
   padding-top: 30px;
   width: 90%;
+
+  @include md {
+    width: 40%;
+    height: 100%;
+    margin-top: 20px;
+    margin-right: 40px;
+    order: 2;
+  }
+
+  @include lg {
+    width: 40%;
+    height: 100%;
+    margin-right: 50px;
+    order: 2;
+  }
 }
 
 .title-heading {
@@ -28,6 +66,29 @@
   text-align: center;
   font-size: 1em;
   font-weight: $bold;
+
+  @include md {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    text-align: left;
+  }
+
+  @include lg {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 1.8em;
+  }
+
+  @include xl {
+    margin-top: 0;
+    margin-left: 80px;
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    text-align: left;
+  }
 }
 
 .text {
@@ -36,11 +97,46 @@
   margin-top: 20px;
   font-size: 0.85em;
   font-weight: $regular;
+
+  @include md {
+    width: 80%;
+    margin-left: 40px;
+    font-size: 1em;
+  }
+
+  @include lg {
+    margin-left: 50px;
+  }
+
+  @include xl {
+    width: 70%;
+    margin-left: 80px;
+    font-size: 1.2em;
+  }
 }
 
 .section-2__link-container {
   margin-top: 30px;
   text-align: center;
+
+  @include md {
+    margin-top: 10px;
+    width: 50%;
+    text-align: left;
+    font-size: 1.3em;
+    margin-left: 40px;
+  }
+
+  @include lg {
+    text-align: left;
+    font-size: 1.5em;
+    margin-left: 50px;
+  }
+
+  @include xl {
+    text-align: left;
+    margin-left: 80px;
+  }
 }
 
 .section-2__link {
@@ -65,6 +161,21 @@
   background: white;
   border-radius: 3px;
   box-shadow: 2px 2px 15px 5px rgba(87, 87, 87, 0.1);
+
+  @include md {
+    width: 65%;
+    margin-left: 40px;
+  }
+
+  @include lg {
+    width: 65%;
+    margin-left: 50px;
+  }
+
+  @include xl {
+    width: 45%;
+    margin-left: 80px;
+  }
 }
 
 .testimonial__container {
@@ -77,6 +188,14 @@
   margin-top: 25px;
   margin-bottom: -10px;
   width: 10px;
+
+  @include md {
+    width: 10px;
+  }
+
+  @include lg {
+    width: 15px;
+  }
 }
 
 .testimonial__text {
@@ -85,6 +204,19 @@
   font-size: 0.6em;
   font-weight: $regular;
   line-height: 2;
+
+  @include md {
+    font-size: 0.7em;
+    padding: 3px;
+  }
+
+  @include lg {
+    font-size: 0.8em;
+  }
+
+  @include xl {
+    font-size: 1em;
+  }
 }
 
 .testimonial__widget-container {
@@ -104,6 +236,18 @@
   font-size: 0.4em;
   font-weight: $bold;
   display: inline-block;
+
+  @include md {
+    left: 30px;
+    font-size: 0.6em;
+    top: -10px;
+  }
+
+  @include lg {
+    left: 50px;
+    font-size: 0.8em;
+    top: -15px;
+  }
 }
 
 .testimonial__widget-role {
@@ -111,7 +255,18 @@
   position: absolute;
   top: 10px;
   left: 30px;
-
   font-size: 7px;
   font-weight: $regular;
+
+  @include md {
+    font-size: 8px;
+    top: 5px;
+    left: 30px;
+  }
+
+  @include lg {
+    font-size: 10px;
+    top: 10px;
+    left: 50px;
+  }
 }
