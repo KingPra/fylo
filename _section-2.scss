@@ -165,7 +165,7 @@
   box-shadow: 2px 2px 15px 5px rgba(87, 87, 87, 0.1);
 
   @include md {
-    width: 65%;
+    width: 85%;
     margin-left: 40px;
   }
 
@@ -192,10 +192,12 @@
   width: 10px;
 
   @include md {
+    margin-top: 10px;
     width: 10px;
   }
 
   @include lg {
+    margin-top: 25px;
     width: 15px;
   }
 }
@@ -209,11 +211,14 @@
 
   @include md {
     font-size: 0.7em;
-    padding: 3px;
+    padding: 0;
+    line-height: 1.6;
   }
 
   @include lg {
+    padding: 5px;
     font-size: 0.8em;
+    line-height: 2;
   }
 
   @include xl {
@@ -240,7 +245,7 @@
   display: inline-block;
 
   @include md {
-    left: 30px;
+    left: 40px;
     font-size: 0.6em;
     top: -10px;
   }
@@ -263,7 +268,7 @@
   @include md {
     font-size: 8px;
     top: 5px;
-    left: 30px;
+    left: 40px;
   }
 
   @include lg {
