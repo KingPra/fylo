@@ -101,7 +101,7 @@
   @include md {
     width: 80%;
     margin-left: 40px;
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   @include lg {
@@ -123,13 +123,11 @@
     margin-top: 10px;
     width: 50%;
     text-align: left;
-    font-size: 1.3em;
     margin-left: 40px;
   }
 
   @include lg {
     text-align: left;
-    font-size: 1.5em;
     margin-left: 50px;
   }
 
@@ -147,6 +145,10 @@
   text-align: center;
   color: $cyan;
   border-bottom: 1px solid $cyan;
+
+  @include lg {
+    font-size: 1em;
+  }
 }
 
 .section-2__arrow {
