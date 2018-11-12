@@ -1,3 +1,1 @@
-This is a starter file using Gulp 4 as the task runner.
-
-Pump is used in place of .pipe for better error handling.
+This is Fylo, a coding exercise to stay sharp with css and responsive web designs. Still debating if I want to make it functional. Decisions, decisions...
