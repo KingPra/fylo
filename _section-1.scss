@@ -35,8 +35,6 @@
   @include sm {
     width: 50%;
     order: 1;
-    top: 0;
-    left: 0;
   }
 }
 
@@ -121,13 +119,22 @@
   border-radius: 3px;
   outline: none;
 
-  // extra large screens
-  @include xl {
-    width: 350px;
-    height: 50px;
+  @include lg {
+    width: 250px;
+    height: 45px;
 
     &::placeholder {
       font-size: 1.5em;
+      padding-left: 15px;
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    // extra large screens
+    @include xl {
+      float: left;
+      margin-left: 80px;
+      width: 350px;
+      height: 50px;
     }
   }
 }
@@ -145,9 +152,15 @@
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 
   @include lg {
-    margin-left: 25px;
-    margin-right: 10px;
-    width: 275px;
-    height: 52px;
+    margin-left: 10px;
+    width: 150px;
+    height: 45px;
+  }
+
+  @include xl {
+    float: left;
+    margin-left: 10px;
+    margin-top: 25px;
+    height: 50px;
   }
 }
