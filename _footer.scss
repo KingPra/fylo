@@ -109,17 +109,4 @@
   margin: 0 5px;
   width: 25px;
   cursor: pointer;
-  path {
-    fill: red !important;
-    stroke: inherit;
-  }
-
-  &:hover {
-    path {
-      fill: blue !important;
-      stroke: inherit;
-    }
-
-    //transition: 0.2s ease-in-out;
-  }
 }

@@ -1,3 +1,24 @@
 body {
   margin: 0;
 }
+
+button {
+  background: $bright-blue;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: $bold;
+  outline: 0;
+  cursor: pointer;
+
+  &:active {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+a {
+  &:active {
+    color: red;
+  }
+}
