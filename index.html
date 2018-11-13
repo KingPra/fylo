@@ -61,12 +61,19 @@
           <!--
             spacing for placeholder text needed for Mozilla browser (padding doesn't work)
           -->
-          <input
-            class="main__input"
-            type="email"
-            placeholder="  Enter your email..."
-          />
-          <button class="main__button" type="submit">Get Started</button>
+          <form formaction="#main-input">
+            <input
+              class="main__input"
+              id="main-input"
+              type="email"
+              placeholder="  Enter your email..."
+            />
+            <input
+              class="main__button button"
+              type="submit"
+              value="Get Started"
+            />
+          </form>
         </div>
       </div>
     </section>
@@ -142,14 +149,19 @@
           </p>
         </div>
 
-        <div class="action__container-sub-2">
+        <form class="action__container-sub-2" formaction="#action-input">
           <input
             class="action__input"
+            id="action-input"
             type="email"
             placeholder="   email@example.com"
           />
-          <button class="action__button">Get Started For Free</button>
-        </div>
+          <input
+            class="action__button button"
+            type="submit"
+            value="Get Started For Free"
+          />
+        </form>
       </div>
     </section>
 
