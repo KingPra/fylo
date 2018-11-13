@@ -145,6 +145,11 @@
   text-align: center;
   color: $cyan;
   border-bottom: 1px solid $cyan;
+  cursor: pointer;
+
+  &:active {
+    color: rgb(189, 173, 31);
+  }
 
   @include lg {
     font-size: 1em;
