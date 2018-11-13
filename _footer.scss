@@ -85,6 +85,11 @@
 .footer__nav__link {
   color: white;
   text-decoration: none;
+
+  &:hover {
+    color: grey;
+    transition: 0.2s ease-in-out;
+  }
 }
 
 .footer__social-media-container {
@@ -104,4 +109,17 @@
   margin: 0 5px;
   width: 25px;
   cursor: pointer;
+  path {
+    fill: red !important;
+    stroke: inherit;
+  }
+
+  &:hover {
+    path {
+      fill: blue !important;
+      stroke: inherit;
+    }
+
+    //transition: 0.2s ease-in-out;
+  }
 }
