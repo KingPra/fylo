@@ -17,6 +17,16 @@ button {
   }
 }
 
+input {
+  border-radius: 2px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  appearance: none;
+  border: 1px solid grey;
+}
+
 a {
   &:active {
     color: red;
