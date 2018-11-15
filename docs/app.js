@@ -1,1 +1,1 @@
-testFunc=(()=>console.log("hello js")),testFunc();
+function login(){event.preventDefault();const e=document.querySelector("#user-name").value,n=document.querySelector("#password").value;console.log(n),e.length>0&&n.length>0?alert(`You are now logged in as ${e}`):alert("Please enter a a valid name and/or password.")}

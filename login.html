@@ -28,13 +28,18 @@
     <section class="card">
       <img src="./images/logo.svg" alt="logo" />
       <form>
-        <input class="login__input" placeholder=" user name" />
-        <input class="login__input" placeholder="password" type="password" />
-        <input class="button" type="submit" />
-        <button class="back-button">Back</button>
+        <input class="login__input" id="user-name" placeholder=" user name" />
+        <input
+          class="login__input"
+          id="password"
+          placeholder="password"
+          type="password"
+        />
+        <input class="button" type="submit" onclick="login()" />
+        <a class="back-button" href="./index.html">Home</a>
       </form>
     </section>
 
-    <script src="" async defer></script>
+    <script src="app.js" async defer></script>
   </body>
 </html>

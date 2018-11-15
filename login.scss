@@ -43,4 +43,12 @@
 .back-button {
   display: block;
   margin: 10px auto;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
 }
