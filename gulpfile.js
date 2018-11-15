@@ -31,8 +31,8 @@ gulp.task("default", ["html", "css", "js", "browserSync", "images"]);
 gulp.task("html", cb => {
   pump(
     [
-      gulp.src("index.html"),
-      newer("docs/index.html"),
+      gulp.src("*.html"),
+      newer("docs/*.html"),
       htmlmin({ collapseWhitespace: true }),
       gulp.dest("docs/"),
       browserSyncReload()
@@ -45,7 +45,7 @@ gulp.task("html", cb => {
 gulp.task("css", cb => {
   pump(
     [
-      gulp.src("main.scss"),
+      gulp.src("*.scss"),
       //newer("docs/style.css"),
       sass(),
       cssnano({
@@ -89,7 +89,7 @@ gulp.task("images", cb => {
 });
 
 gulp.task("watch", ["default"], () => {
-  gulp.watch("index.html", ["html"]);
+  gulp.watch("*.html", ["html"]);
   gulp.watch("*.scss", ["css"]);
   gulp.watch("app.js", ["js"]);
   gulp.watch("images/**.*", ["images"]);

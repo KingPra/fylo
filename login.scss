@@ -1,0 +1,46 @@
+@import "main.scss";
+.card {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  background: $blue;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+  @include md {
+    width: 70%;
+  }
+}
+
+@include lg {
+  width: 50%;
+}
+
+@include xl {
+  width: 20%;
+}
+
+.login__input {
+  width: 200px;
+  height: 40px;
+  margin: 10px auto;
+  font-weight: 1.5em;
+  border-radius: 3px;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  margin: auto;
+  margin-bottom: 10px;
+  display: block;
+  width: 200px;
+  height: 40px;
+  background: $bright-blue;
+}
+
+.back-button {
+  display: block;
+  margin: 10px auto;
+}
