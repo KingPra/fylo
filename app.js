@@ -20,3 +20,7 @@ function email() {
 
   email.length > 1 ? window.location.replace("./email-sent.html") : "";
 }
+
+function team() {
+  console.log("teamo supreme-o");
+}
