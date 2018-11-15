@@ -33,12 +33,10 @@
       <nav class="navbar">
         <img class="navbar__branding" src="./images/logo.svg" />
         <ul class="navbar__nav">
+          <li class="navbar__nav__item"><a class="nav__link">Features</a></li>
+          <li class="navbar__nav__item"><a class="nav__link">Team</a></li>
           <li class="navbar__nav__item">
-            <a class="nav__item__link">Features</a>
-          </li>
-          <li class="navbar__nav__item"><a class="nav__item__link">Team</a></li>
-          <li class="navbar__nav__item">
-            <a class="nav__item__link">Sign In</a>
+            <a class="nav__link" href="./login.html">Sign In</a>
           </li>
         </ul>
       </nav>
@@ -63,7 +61,7 @@
           -->
           <form formaction="#main-input">
             <input
-              class="main__input"
+              class="main__input email"
               id="main-input"
               type="email"
               placeholder="  Enter your email..."
@@ -71,6 +69,7 @@
             <input
               class="main__button button"
               type="submit"
+              onclick="validate(email)"
               value="Get Started"
             />
           </form>
@@ -157,9 +156,10 @@
             placeholder="   email@example.com"
           />
           <input
-            class="action__button button"
+            class="action__button button email"
             type="submit"
             value="Get Started For Free"
+            onclick="validate(email)"
           />
         </form>
       </div>
