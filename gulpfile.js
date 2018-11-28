@@ -46,7 +46,7 @@ gulp.task("css", cb => {
   pump(
     [
       gulp.src("*.scss"),
-      //newer("docs/style.css"),
+      newer("docs/*.css"),
       sass(),
       cssnano({
         autoprefixer: {
@@ -65,8 +65,8 @@ gulp.task("css", cb => {
 gulp.task("js", cb => {
   pump(
     [
-      gulp.src("app.js"),
-      newer("docs/app.js"),
+      gulp.src("*.js"),
+      newer("docs/*.js"),
       uglify(),
       gulp.dest("docs/"),
       browserSyncReload()
@@ -91,6 +91,6 @@ gulp.task("images", cb => {
 gulp.task("watch", ["default"], () => {
   gulp.watch("*.html", ["html"]);
   gulp.watch("*.scss", ["css"]);
-  gulp.watch("app.js", ["js"]);
+  gulp.watch("*.js", ["js"]);
   gulp.watch("images/**.*", ["images"]);
 });
