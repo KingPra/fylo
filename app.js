@@ -1,7 +1,8 @@
 // checks to make sure input values on login page are not empty. Alerts user they are signed or if they need to fill out input field.
-//import teamInfo from "./teamInfo.js";
 
-//console.log("teamInfo: ", teamInfo);
+import teamInfo from "./teamInfo.js";
+//const teamInfo = require("./teamInfo.js");
+console.log(teamInfo);
 
 function validate(val) {
   event.preventDefault();
@@ -27,6 +28,9 @@ function email() {
   email.length > 1 ? window.location.replace("./email-sent.html") : "";
 }
 
+// capitalize first letter of word;
+const capitalize = word => word[0].toUpperCase() + word.slice(1);
+
 // pull team info from api and create list of 5 team members
 function getTeam() {
   const url = "https://randomuser.me/api/?results=5&nat=us";
@@ -44,12 +48,13 @@ function getTeam() {
         const div = document.createElement("div");
         const avatar = `${person.picture.large}`;
         const image = new Image();
-
+        const fname = person.name.first;
+        const lname = person.name.last;
         // apply class names to all dynamically created elements;
         list.className = "team__card";
         image.className = "team__img";
         div.className = "team__name";
-        div.textContent = `${person.name.first} ${person.name.last}`;
+        div.textContent = `${capitalize(fname)} ${capitalize(lname)}`;
         image.src = avatar;
 
         list.append(image);

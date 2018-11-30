@@ -1,1 +1,1 @@
-export default{data:()=>({titles:["test one","test 2","test 3","test 4","test 5","test 6","test 7","test 8","test 9","tests 10"]})};
+function teamInfo(){return"test one"}export default teamInfo();
