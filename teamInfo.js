@@ -1,5 +1,11 @@
 function teamInfo() {
-  return "test one";
+  return [
+    "Co-Founder",
+    "Co-Founder",
+    "Lead Developer",
+    "Business Specialist",
+    "Marketing Guru"
+  ];
 }
 
 // [
