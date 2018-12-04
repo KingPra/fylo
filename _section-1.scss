@@ -8,7 +8,7 @@
   position: relative;
   font-family: $body-font;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 5%;
 
   @include md {
     display: flex;
@@ -64,6 +64,7 @@
   @include lg {
     text-align: left;
     width: 80%;
+    margin: 0;
     margin-top: 60px;
     font-size: 2.2em;
   }
@@ -99,6 +100,7 @@
   // large screens
   @include lg {
     font-size: 1.2em;
+    margin: 0;
   }
   // extra large screens
   @include xl {
@@ -129,7 +131,6 @@
     // extra large screens
     @include xl {
       float: left;
-      margin-left: 80px;
       width: 350px;
       height: 50px;
     }
