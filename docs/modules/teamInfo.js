@@ -1,0 +1,1 @@
+function teamInfo(){return["Co-Founder","Co-Founder","Lead Developer","Business Specialist","Marketing Guru"]}export default teamInfo();

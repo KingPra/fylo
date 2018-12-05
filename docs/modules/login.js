@@ -1,0 +1,1 @@
+function login(){const e=document.querySelector("#user-name").value,a=document.querySelector("#password").value;e.length>0&&a.length>0?alert(`You are now logged in as ${e}`):alert("Please enter a a valid name and/or password.")}export default login();

@@ -75,6 +75,20 @@ gulp.task("js", cb => {
   );
 });
 
+// JS modules
+gulp.task("js", cb => {
+  pump(
+    [
+      gulp.src("modules/*.js"),
+      newer("docs/modules/*.js"),
+      uglify(),
+      gulp.dest("docs/modules/"),
+      browserSyncReload()
+    ],
+    cb
+  );
+});
+
 // Image Optimization
 gulp.task("images", cb => {
   pump(
@@ -92,5 +106,6 @@ gulp.task("watch", ["default"], () => {
   gulp.watch("*.html", ["html"]);
   gulp.watch("*.scss", ["css"]);
   gulp.watch("*.js", ["js"]);
+  gulp.watch("modules/*.js", ["js"]);
   gulp.watch("images/**.*", ["images"]);
 });

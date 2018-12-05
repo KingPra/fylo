@@ -1,6 +1,8 @@
 // checks to make sure input values on login page are not empty. Alerts user they are signed or if they need to fill out input field.
 // import job titles
-import teamInfo from "./teamInfo.js";
+import teamInfo from "./modules/teamInfo.js";
+import capitalize from "./modules/capitalize.js";
+//import login from "./modules/login.js";
 
 // check if submit is from login or email
 function validate(val) {
@@ -11,7 +13,6 @@ function validate(val) {
 // displays alert box for login
 function login() {
   const name = document.querySelector("#user-name").value;
-
   const pass = document.querySelector("#password").value;
 
   name.length > 0 && pass.length > 0
@@ -24,9 +25,6 @@ function email() {
   const email = document.querySelector(".email").value;
   email.length > 1 ? window.location.replace("./email-sent.html") : "";
 }
-
-// capitalize first letter of word;
-const capitalize = word => word[0].toUpperCase() + word.slice(1);
 
 // pull team info from api and create list of 5 team members
 function getTeam() {
