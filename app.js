@@ -1,12 +1,21 @@
-// checks to make sure input values on login page are not empty. Alerts user they are signed or if they need to fill out input field.
 // import job titles
+// const teamInfo = [
+//   "big boss",
+//   "little boss",
+//   "not boss",
+//   "asst not boss ",
+//   "random person"
+// ];
 import teamInfo from "./modules/teamInfo.js";
-import capitalize from "./modules/capitalize.js";
+//import capitalize from "./modules/capitalize.js";
 //import login from "./modules/login.js";
+
+// checks to make sure input values on login page are not empty. Alerts user they are signed or if they need to fill out input field.
 
 // check if submit is from login or email
 function validate(val) {
   event.preventDefault();
+  console.log("validate", val);
   val === "login" ? login() : email();
 }
 
@@ -26,42 +35,46 @@ function email() {
   email.length > 1 ? window.location.replace("./email-sent.html") : "";
 }
 
+// capitalize first letter of word;
+const capitalize = word => word[0].toUpperCase() + word.slice(1);
+
 // pull team info from api and create list of 5 team members
 function getTeam() {
   const url = "https://randomuser.me/api/?results=5&nat=us";
+  const frame = document.querySelector(".team");
+  if (frame !== null) {
+    fetch(url).then(function(response) {
+      let data = response.json();
+      data.then(data => {
+        let people = data.results;
+        // loop through data
+        people.map((person, key) => {
+          const title = teamInfo[key];
+          //const frame = document.querySelector(".team");
+          const list = document.createElement("li");
+          const div = document.createElement("div");
+          const avatar = `${person.picture.large}`;
+          const image = new Image();
 
-  fetch(url).then(function(response) {
-    let data = response.json();
-    data.then(data => {
-      let people = data.results;
+          const fname = person.name.first;
+          const lname = person.name.last;
 
-      // loop through data
-      people.map((person, key) => {
-        const title = teamInfo[key];
-        const frame = document.querySelector(".team");
-        const list = document.createElement("li");
-        const div = document.createElement("div");
-        const avatar = `${person.picture.large}`;
-        const image = new Image();
+          // apply class names to all dynamically created elements;
+          list.className = "team__card";
+          image.className = "team__img";
+          div.className = "team__name";
+          div.innerHTML = `${capitalize(fname)} ${capitalize(
+            lname
+          )} <br/> ${title}`;
+          image.src = avatar;
 
-        const fname = person.name.first;
-        const lname = person.name.last;
-
-        // apply class names to all dynamically created elements;
-        list.className = "team__card";
-        image.className = "team__img";
-        div.className = "team__name";
-        div.innerHTML = `${capitalize(fname)} ${capitalize(
-          lname
-        )} <br/> ${title}`;
-        image.src = avatar;
-
-        list.append(image);
-        list.appendChild(div);
-        frame.appendChild(list);
+          list.append(image);
+          list.appendChild(div);
+          frame.appendChild(list);
+        });
       });
     });
-  });
+  }
 }
 
 getTeam();

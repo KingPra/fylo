@@ -61,20 +61,6 @@ gulp.task("css", cb => {
   );
 });
 
-// JS
-gulp.task("js", cb => {
-  pump(
-    [
-      gulp.src("*.js"),
-      newer("docs/*.js"),
-      uglify(),
-      gulp.dest("docs/"),
-      browserSyncReload()
-    ],
-    cb
-  );
-});
-
 // JS modules
 gulp.task("js", cb => {
   pump(
@@ -83,6 +69,20 @@ gulp.task("js", cb => {
       newer("docs/modules/*.js"),
       uglify(),
       gulp.dest("docs/modules/"),
+      browserSyncReload()
+    ],
+    cb
+  );
+});
+
+// JS
+gulp.task("js", cb => {
+  pump(
+    [
+      gulp.src("*.js"),
+      newer("docs/*.js"),
+      uglify(),
+      gulp.dest("docs/"),
       browserSyncReload()
     ],
     cb
