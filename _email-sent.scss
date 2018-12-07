@@ -1,5 +1,11 @@
 .email-sent {
+  font-family: $body-font;
   font-size: 18px;
   margin: auto;
   padding-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
