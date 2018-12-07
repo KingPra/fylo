@@ -1,23 +1,16 @@
-// import job titles
-// const teamInfo = [
-//   "big boss",
-//   "little boss",
-//   "not boss",
-//   "asst not boss ",
-//   "random person"
-// ];
 import teamInfo from "./modules/teamInfo.js";
 //import capitalize from "./modules/capitalize.js";
 //import login from "./modules/login.js";
 
-// checks to make sure input values on login page are not empty. Alerts user they are signed or if they need to fill out input field.
+// need to expose function to window due to modules creating a scope;
+window.validate = validate;
 
 // check if submit is from login or email
 function validate(val) {
   event.preventDefault();
-  console.log("validate", val);
   val === "login" ? login() : email();
 }
+// checks to make sure input values on login page are not empty. Alerts user they are signed or if they need to fill out input field.
 
 // displays alert box for login
 function login() {
@@ -32,7 +25,9 @@ function login() {
 // check email input fields are not empty and displays email sent message
 function email() {
   const email = document.querySelector(".email").value;
-  email.length > 1 ? window.location.replace("./email-sent.html") : "";
+  email.length > 1
+    ? window.location.replace("./email-sent.html")
+    : alert("Please enter a valid email");
 }
 
 // capitalize first letter of word;
