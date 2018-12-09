@@ -1,5 +1,5 @@
 import teamInfo from "./modules/teamInfo.js";
-//import capitalize from "./modules/capitalize.js";
+import capitalize from "./modules/capitalize.js";
 //import login from "./modules/login.js";
 
 // need to expose function to window due to modules creating a scope;
@@ -24,14 +24,20 @@ function login() {
 
 // check email input fields are not empty and displays email sent message
 function email() {
-  const email = document.querySelector(".email").value;
-  email.length > 1
+  const email = document.querySelectorAll(".email");
+
+  let count = 0;
+  for (let i = 0; i < email.length; i++) {
+    event.preventDefault();
+    count += email[i].value.length;
+  }
+  count > 2
     ? window.location.replace("./email-sent.html")
     : alert("Please enter a valid email");
 }
 
 // capitalize first letter of word;
-const capitalize = word => word[0].toUpperCase() + word.slice(1);
+//const capitalize = word => word[0].toUpperCase() + word.slice(1);
 
 // pull team info from api and create list of 5 team members
 function getTeam() {

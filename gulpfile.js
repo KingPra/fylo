@@ -45,8 +45,8 @@ gulp.task("html", cb => {
 gulp.task("css", cb => {
   pump(
     [
-      gulp.src("*.scss"),
-      newer("docs/*.css"),
+      gulp.src("styles/*.scss"),
+      newer("docs/styles/*.css"),
       sass(),
       cssnano({
         autoprefixer: {
@@ -54,7 +54,7 @@ gulp.task("css", cb => {
           add: true
         }
       }),
-      gulp.dest("docs/"),
+      gulp.dest("docs/styles/"),
       browserSyncReload()
     ],
     cb
